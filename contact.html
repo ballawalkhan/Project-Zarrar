@@ -1,164 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Zarrar Adventures</title>
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
-    <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    
-    <!-- Favicon -->
-    <link rel="icon" href="assets/images/logo.png" type="image/png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact & Booking | Zarrar Adventures</title>
+  <meta name="description" content="Get in touch with Zarrar Adventures. Book your expedition, ask questions, or submit a booking inquiry." />
+  <link rel="icon" href="/public/logo.jpg" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .fade-in.visible { opacity: 1; transform: none; }
+  </style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container navbar">
-            <a href="index.html" class="logo">
-                <img src="assets/images/logo.png" alt="Zarrar Adventures Logo">
+
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <a href="/" class="nav-brand"><img src="/public/logo.jpg" alt="Zarrar Adventures Logo" class="nav-logo" /><span class="nav-title">Zarrar <span class="accent">Adventures</span></span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/" class="nav-link">Home</a></li><li><a href="/about.html" class="nav-link">About</a></li><li><a href="/services.html" class="nav-link">Services</a></li><li><a href="/training.html" class="nav-link">Training</a></li><li><a href="/shop.html" class="nav-link">Shop</a></li><li><a href="/blog.html" class="nav-link">Blog</a></li><li><a href="/opportunities.html" class="nav-link">Opportunities</a></li><li><a href="/sustainability.html" class="nav-link">Sustainability</a></li><li><a href="/contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="mode-toggle" id="modeToggle"><span class="mode-dot"></span><span class="mode-text" id="modeText">Domestic</span></div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+  <div class="page-hero">
+    <div class="container">
+      <span class="section-label" style="color:rgba(255,255,255,0.6);">Get In Touch</span>
+      <h1>Contact & Booking</h1>
+      <p>Ready to plan your adventure? Our team is here to help you every step of the way.</p>
+      <div class="breadcrumb" style="justify-content:center;margin-top:16px;"><a href="/">Home</a><span class="sep">›</span><span class="current">Contact</span></div>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="grid-2 fade-in">
+
+        <!-- LEFT: INFO -->
+        <div>
+          <h2 style="color:var(--midnight-blue);margin-bottom:8px;">Let's Talk Adventure</h2>
+          <p style="margin-bottom:32px;">Reach out for custom itineraries, corporate bookings, or general inquiries. We typically respond within 24 hours.</p>
+
+          <div class="contact-info-item">
+            <div class="contact-info-icon">📍</div>
+            <div class="contact-info-text">
+              <h4>Headquarters</h4>
+              <p>Pakistan — We operate across Gilgit-Baltistan, KPK, Punjab & Balochistan</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon">📞</div>
+            <div class="contact-info-text">
+              <h4>Phone & WhatsApp</h4>
+              <p>+92 321 9810030</p>
+              <p>Available: Daily 9am – 9pm PKT</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon">✉️</div>
+            <div class="contact-info-text">
+              <h4>Email</h4>
+              <p>info@zarraradventures.com</p>
+              <p>bookings@zarraradventures.com</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon">🕐</div>
+            <div class="contact-info-text">
+              <h4>Response Time</h4>
+              <p>WhatsApp: Within 2 hours</p>
+              <p>Email: Within 24 hours</p>
+            </div>
+          </div>
+
+          <a href="https://wa.me/9239810030?text=Hello!%20I%20would%20like%20to%20book%20an%20adventure%20with%20Zarrar%20Adventures." class="whatsapp-btn" target="_blank" rel="noopener" style="margin-top:8px;display:inline-flex;">
+            💬 Chat on WhatsApp
+          </a>
+
+          <!-- MAP PLACEHOLDER -->
+          <div class="map-placeholder" style="margin-top:32px;">
+            <div class="map-icon">🗺️</div>
+            <p>Interactive Map</p>
+            <p style="font-size:0.8rem;">Pakistan — serving nationwide</p>
+          </div>
+        </div>
+
+        <!-- RIGHT: CONTACT FORM -->
+        <div>
+          <div class="form-box">
+            <h3>Send Us a Message</h3>
+            <p style="margin-bottom:24px;">General inquiries, questions, or feedback — we'd love to hear from you.</p>
+            <form data-form="contact">
+              <div class="form-grid">
+                <div class="form-group">
+                  <label class="form-label" for="con-name">Full Name *</label>
+                  <input class="form-control" type="text" id="con-name" placeholder="Your name" required />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="con-email">Email Address *</label>
+                  <input class="form-control" type="email" id="con-email" placeholder="your@email.com" required />
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="con-phone">Phone Number</label>
+                <input class="form-control" type="tel" id="con-phone" placeholder="+92 321 9810030" />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="con-subject">Subject</label>
+                <select class="form-control" id="con-subject">
+                  <option value="">-- Select Topic --</option>
+                  <option>Trip Inquiry</option>
+                  <option>Training Enrollment</option>
+                  <option>Gear Shop</option>
+                  <option>Corporate Booking</option>
+                  <option>Volunteer / Opportunities</option>
+                  <option>General Question</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="con-msg">Message *</label>
+                <textarea class="form-control" id="con-msg" placeholder="How can we help you?" required style="min-height:140px;"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Send Message →</button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING INQUIRY -->
+  <section class="section bg-light" id="booking">
+    <div class="container" style="max-width:800px;">
+      <span class="section-label" style="display:block;text-align:center;">Reserve Your Spot</span>
+      <h2 class="section-title">Booking Inquiry</h2>
+      <p class="section-subtitle">Ready to book? Fill out this form and we'll send you a confirmed itinerary and payment details within 24 hours.</p>
+
+      <div class="info-box">
+        <p><strong>50% Advance Payment Required:</strong> A 50% deposit is required to confirm all bookings. The remaining balance is due 3 days before departure. All payments are securely processed via bank transfer or JazzCash/EasyPaisa.</p>
+      </div>
+
+      <div class="form-box fade-in">
+        <form data-form="booking">
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="form-label" for="bk-name">Full Name *</label>
+              <input class="form-control" type="text" id="bk-name" placeholder="Your full name" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="bk-email">Email Address *</label>
+              <input class="form-control" type="email" id="bk-email" placeholder="your@email.com" required />
+            </div>
+          </div>
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="form-label" for="bk-phone">Phone / WhatsApp *</label>
+              <input class="form-control" type="tel" id="bk-phone" placeholder="+92 300 0000000" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="bk-people">Number of People *</label>
+              <input class="form-control" type="number" id="bk-people" min="1" max="50" placeholder="e.g. 4" required />
+            </div>
+          </div>
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="form-label" for="bk-trip">Trip / Service *</label>
+              <select class="form-control" id="bk-trip" required>
+                <option value="">-- Select Trip --</option>
+                <optgroup label="Road Trips">
+                  <option>Karakoram Highway Circuit (10 Days)</option>
+                  <option>Swat & Kaghan Valley (5-7 Days)</option>
+                  <option>Balochistan Desert & Coast (8 Days)</option>
+                </optgroup>
+                <optgroup label="Outdoor Activities">
+                  <option>K2 Base Camp Trek (14 Days)</option>
+                  <option>Fairy Meadows Expedition (7 Days)</option>
+                  <option>Hunza Valley Circuit (10 Days)</option>
+                  <option>Deosai Plateau (5 Days)</option>
+                  <option>Rock Climbing</option>
+                  <option>Paragliding</option>
+                </optgroup>
+                <optgroup label="Training">
+                  <option>Bushcraft Fundamentals (3 Days)</option>
+                  <option>Wilderness Survival (5 Days)</option>
+                  <option>Wilderness First Aid (4 Days)</option>
+                </optgroup>
+                <optgroup label="Corporate">
+                  <option>Corporate Team Building Trip</option>
+                  <option>School / University Study Trip</option>
+                </optgroup>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="bk-date">Preferred Date *</label>
+              <input class="form-control" type="date" id="bk-date" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="bk-notes">Special Requirements or Notes</label>
+            <textarea class="form-control" id="bk-notes" placeholder="Dietary requirements, fitness level, specific requests, equipment needs..."></textarea>
+          </div>
+          <div class="form-check">
+            <input type="checkbox" id="bk-disclaimer" required />
+            <label for="bk-disclaimer">⚠️ I understand that outdoor adventures carry inherent risks. I confirm that all participants are fit and healthy, and I accept the safety guidelines and terms of Zarrar Adventures. I agree that a 50% advance payment is required to confirm this booking. *</label>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg" style="width:100%;justify-content:center;margin-top:24px;">Submit Booking Inquiry →</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+<a href="https://wa.me/923219810030" class="whatsapp-float" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
+<footer class="footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><img src="/public/logo.jpg" alt="Zarrar Adventures" class="footer-logo" /><div class="brand-name">Zarrar Adventures</div><p>Travel & Tourism (Pvt.) Ltd. — Est. 2017</p><span class="est">EST. 2017</span></div><div><h4>Quick Links</h4><ul><li><a href="/">Home</a></li><li><a href="/about.html">About</a></li><li><a href="/services.html">Services</a></li><li><a href="/training.html">Training</a></li><li><a href="/contact.html">Contact</a></li></ul></div><div><h4>Explore</h4><ul><li><a href="/shop.html">Shop</a></li><li><a href="/blog.html">Blog</a></li><li><a href="/opportunities.html">Opportunities</a></li><li><a href="/sustainability.html">Sustainability</a></li></ul></div><div class="footer-contact"><h4>Contact Us</h4><p>📍 Pakistan (HQ)</p><p>📞 +92 321 9810030</p><p>✉️ info@zarraradventures.com</p><a href="https://wa.me/923219810030" class="whatsapp-btn" style="margin-top:16px;font-size:0.85rem;padding:10px 20px;display:inline-flex;">💬 WhatsApp Us</a>
+  
+  <div class="social-links" style="margin-top:15px;">
+            <a href="https://www.facebook.com/zarraradventures/" target="_blank" class="social-link">
+              <i class="fab fa-facebook-f"></i>
             </a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="services.html">Adventures</a></li>
-                <li><a href="training.html">Training</a></li>
-                <li><a href="shop.html">Equipment</a></li>
-                <li><a href="contact.html" class="active">Book Now</a></li>
-            </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
-    </header>
 
-    <!-- Page Header -->
-    <section class="page-header" style="background-color: var(--primary-color); color: white; padding: 60px 0; text-align: center;">
-        <div class="container">
-            <h1>Contact & Booking</h1>
-            <p>Get in touch to plan your next adventure.</p>
-        </div>
-    </section>
+            <a href="https://www.instagram.com/zarraradventures" target="_blank" class="social-link">
+              <i class="fab fa-instagram"></i>
+            </a>
 
-    <!-- Contact Form & Info -->
-    <section class="contact-section">
-        <div class="container">
-            <div class="contact-wrapper">
-                <div class="contact-form">
-                    <h2>Send us a Message</h2>
-                    <form>
-                        <div class="form-group">
-                            <label for="name">Full Name</label>
-                            <input type="text" id="name" class="form-control" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" class="form-control" placeholder="your.email@example.com" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" class="form-control" placeholder="+92 300 1234567">
-                        </div>
-                        <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <select id="subject" class="form-control">
-                                <option>General Inquiry</option>
-                                <option>Adventure Booking</option>
-                                <option>Training Program</option>
-                                <option>Equipment Purchase</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" class="form-control" rows="5" placeholder="Tell us about your plans..." required></textarea>
-                        </div>
-                        <button type="submit" class="btn">Send Message</button>
-                    </form>
-                </div>
-                
-                <div class="contact-info">
-                    <h2>Contact Information</h2>
-                    <div style="margin-bottom: 30px;">
-                        <div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
-                            <i class="fas fa-map-marker-alt" style="font-size: 1.5rem; color: var(--accent-color); margin-right: 15px; margin-top: 5px;"></i>
-                            <div>
-                                <h4>Location</h4>
-                                <p>Islamabad, Pakistan<br>(Full address to be updated)</p>
-                            </div>
-                        </div>
-                        <div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
-                            <i class="fas fa-envelope" style="font-size: 1.5rem; color: var(--accent-color); margin-right: 15px; margin-top: 5px;"></i>
-                            <div>
-                                <h4>Email</h4>
-                                <p>info@zarraradventures.com<br>bookings@zarraradventures.com</p>
-                            </div>
-                        </div>
-                        <div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
-                            <i class="fas fa-phone" style="font-size: 1.5rem; color: var(--accent-color); margin-right: 15px; margin-top: 5px;"></i>
-                            <div>
-                                <h4>Phone</h4>
-                                <p>+92 300 1234567<br>+92 51 1234567</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="map-placeholder" style="background-color: #eee; height: 300px; display: flex; justify-content: center; align-items: center; border-radius: 8px;">
-                        <p style="color: #666;"><i class="fas fa-map"></i> Google Maps Placeholder</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+            <a href="#" target="_blank" class="social-link">
+              <i class="fab fa-youtube"></i>
+            </a>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-col">
-                    <h3>Zarrar Adventures</h3>
-                    <p>Your premier partner for adventure tourism, training, and equipment in Pakistan.</p>
-                </div>
-                <div class="footer-col">
-                    <h3>Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="training.html">Training</a></li>
-                        <li><a href="shop.html">Shop</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3>Contact Us</h3>
-                    <ul class="footer-links">
-                        <li><i class="fas fa-map-marker-alt"></i> Pakistan</li>
-                        <li><i class="fas fa-envelope"></i> info@zarraradventures.com</li>
-                        <li><i class="fas fa-phone"></i> +92 300 1234567</li>
-                    </ul>
-                    <div class="social-icons" style="margin-top: 20px;">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2024 Zarrar Adventures Travel & Tourism (Pvt.) Ltd. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+            <a href="#" target="_blank" class="social-link">
+              <i class="fab fa-tiktok"></i>
+            </a>
+          </div>
 
-    <!-- JS -->
-    <script src="assets/js/script.js"></script>
-</body>
+</div></div><div class="footer-bottom"><p>© 2024 Zarrar Adventures Travel & Tourism (Pvt.) Ltd. All rights reserved.</p></div></div></footer>
+
+<script src="/assets/js/script.js"></script>
+</body> 
 </html>

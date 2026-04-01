@@ -1,142 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Equipment Shop - Zarrar Adventures</title>
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
-    <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    
-    <!-- Favicon -->
-    <link rel="icon" href="assets/images/logo.png" type="image/png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gear Shop | Zarrar Adventures</title>
+  <meta name="description" content="Certified outdoor equipment and pre-loved adventure gear. Shop trekking, climbing, and camping equipment." />
+  <link rel="icon" href="/public/logo.jpg" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .fade-in.visible { opacity: 1; transform: none; }
+    .product-card { background: #fff; border-radius: var(--radius); box-shadow: var(--card-shadow); overflow: hidden; transition: var(--transition); }
+    .product-card:hover { transform: translateY(-6px); box-shadow: var(--card-shadow-hover); }
+    .product-img { width: 100%; height: 220px; object-fit: contain; padding: 24px; background: var(--light-gray); }
+    .product-body { padding: 20px; }
+    .product-body h3 { font-size: 1rem; color: var(--midnight-blue); margin-bottom: 6px; }
+    .product-body p { font-size: 0.85rem; }
+    .product-price { font-family: 'Poppins', sans-serif; font-size: 1.15rem; font-weight: 700; color: var(--burnt-orange); margin: 10px 0 14px; }
+    .badge-certified { background: rgba(11,61,46,0.1); color: var(--forest-green); font-size: 0.72rem; padding: 3px 10px; border-radius: 20px; font-weight: 700; display: inline-block; }
+    .badge-preloved { background: rgba(231,111,45,0.1); color: var(--burnt-orange); font-size: 0.72rem; padding: 3px 10px; border-radius: 20px; font-weight: 700; display: inline-block; }
+  </style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container navbar">
-            <a href="index.html" class="logo">
-                <img src="assets/images/logo.png" alt="Zarrar Adventures Logo">
+
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <a href="/" class="nav-brand"><img src="/public/logo.jpg" alt="Zarrar Adventures Logo" class="nav-logo" /><span class="nav-title">Zarrar <span class="accent">Adventures</span></span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/" class="nav-link">Home</a></li><li><a href="/about.html" class="nav-link">About</a></li><li><a href="/services.html" class="nav-link">Services</a></li><li><a href="/training.html" class="nav-link">Training</a></li><li><a href="/shop.html" class="nav-link">Shop</a></li><li><a href="/blog.html" class="nav-link">Blog</a></li><li><a href="/opportunities.html" class="nav-link">Opportunities</a></li><li><a href="/sustainability.html" class="nav-link">Sustainability</a></li><li><a href="/contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="mode-toggle" id="modeToggle"><span class="mode-dot"></span><span class="mode-text" id="modeText">Domestic</span></div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+  <div class="page-hero">
+    <div class="container">
+      <span class="section-label" style="color:rgba(255,255,255,0.6);">Gear Up</span>
+      <h1>Adventure Gear Shop</h1>
+      <p>Certified equipment and quality pre-loved gear for every outdoor adventure.</p>
+      <div class="breadcrumb" style="justify-content:center;margin-top:16px;"><a href="/">Home</a><span class="sep">›</span><span class="current">Shop</span></div>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:36px;">
+        <div>
+          <h2 style="color:var(--midnight-blue);">Our Products</h2>
+          <p>Tap "Inquire to Buy" — our team will get back to you with availability and pricing.</p>
+        </div>
+        <div class="category-tabs" style="margin-bottom:0;">
+          <button class="category-tab active" data-category="all">All Products</button>
+          <button class="category-tab" data-category="certified">Certified Equipment</button>
+          <button class="category-tab" data-category="preloved">Pre-Loved Gear</button>
+        </div>
+      </div>
+
+      <div class="grid-4 fade-in">
+
+        <div class="product-card" data-category-item="certified">
+          <img class="product-img" src="/public/images/tracking-poles.jpg"alt="Trekking Poles" />
+          <div class="product-body">
+            <span class="badge-certified">Certified</span>
+            <h3>Black Diamond Trekking Poles</h3>
+            <p>Lightweight aluminium poles with ergonomic grips. Anti-shock system. Pair.</p>
+            <div class="product-price">PKR 8,500</div>
+            <a href="/contact.html" class="btn btn-primary btn-sm" style="width:100%;justify-content:center;">Inquire to Buy</a>
+          </div>
+        </div>
+
+        <div class="product-card" data-category-item="certified">
+          <img class="product-img" src="/public/images/backbag.jpg" alt="Hiking Backpack" />
+          <div class="product-body">
+            <span class="badge-certified">Certified</span>
+            <h3>Osprey 50L Trekking Pack</h3>
+            <p>Professional 50-litre expedition backpack with rain cover and frame support.</p>
+            <div class="product-price">PKR 24,000</div>
+            <a href="/contact.html" class="btn btn-primary btn-sm" style="width:100%;justify-content:center;">Inquire to Buy</a>
+          </div>
+        </div>
+
+        <div class="product-card" data-category-item="certified">
+          <img class="product-img" src="/public/images/expedition-tent.jpg" alt="Tent" />
+          <div class="product-body">
+            <span class="badge-certified">Certified</span>
+            <h3>4-Season Expedition Tent</h3>
+            <p>2-person high-altitude tent rated to -20°C. Windproof geodesic design.</p>
+            <div class="product-price">PKR 45,000</div>
+            <a href="/contact.html" class="btn btn-primary btn-sm" style="width:100%;justify-content:center;">Inquire to Buy</a>
+          </div>
+        </div>
+
+        <div class="product-card" data-category-item="certified">
+          <img class="product-img" src="/public/images/headlamp.jpg" alt="Headlamp" />
+          <div class="product-body">
+            <span class="badge-certified">Certified</span>
+            <h3>Petzl Actik Core Headlamp</h3>
+            <p>450-lumen rechargeable headlamp with red night vision. IP67 waterproof.</p>
+            <div class="product-price">PKR 6,800</div>
+            <a href="/contact.html" class="btn btn-primary btn-sm" style="width:100%;justify-content:center;">Inquire to Buy</a>
+          </div>
+        </div>
+
+        <div class="product-card" data-category-item="preloved">
+          <img class="product-img" src="/public/images/trekking-boots.jpg" alt="Trekking Boots" />
+          <div class="product-body">
+            <span class="badge-preloved">Pre-Loved</span>
+            <h3>Salomon X Ultra Boots (US10)</h3>
+            <p>Lightly used waterproof trekking boots. Excellent condition, 2 seasons use.</p>
+            <div class="product-price">PKR 9,000 <span style="font-size:0.8rem;text-decoration:line-through;color:var(--text-muted);">PKR 18,000</span></div>
+            <a href="/contact.html" class="btn btn-primary btn-sm" style="width:100%;justify-content:center;">Inquire to Buy</a>
+          </div>
+        </div>
+
+        <div class="product-card" data-category-item="preloved">
+          <img class="product-img" src="/public/images/sleeping-bag.jpg" alt="Sleeping Bag" />
+          <div class="product-body">
+            <span class="badge-preloved">Pre-Loved</span>
+            <h3>North Face -10°C Sleeping Bag</h3>
+            <p>Down-filled mummy sleeping bag. Used on 3 expeditions. Professionally cleaned.</p>
+            <div class="product-price">PKR 12,000 <span style="font-size:0.8rem;text-decoration:line-through;color:var(--text-muted);">PKR 22,000</span></div>
+            <a href="/contact.html" class="btn btn-primary btn-sm" style="width:100%;justify-content:center;">Inquire to Buy</a>
+          </div>
+        </div>
+
+        <div class="product-card" data-category-item="preloved">
+          <img class="product-img" src="/public/images/climbing-harness.jpg" alt="Climbing Harness" />
+          <div class="product-body">
+            <span class="badge-preloved">Pre-Loved</span>
+            <h3>Black Diamond Climbing Harness</h3>
+            <p>Sit harness in good condition. Inspected and safety-certified by our team. Medium size.</p>
+            <div class="product-price">PKR 4,500 <span style="font-size:0.8rem;text-decoration:line-through;color:var(--text-muted);">PKR 9,000</span></div>
+            <a href="/contact.html" class="btn btn-primary btn-sm" style="width:100%;justify-content:center;">Inquire to Buy</a>
+          </div>
+        </div>
+
+        <div class="product-card" data-category-item="certified">
+          <img class="product-img" src="/public/images/water-filter.jpg" alt="Water Filter" />
+          <div class="product-body">
+            <span class="badge-certified">Certified</span>
+            <h3>Sawyer Squeeze Water Filter</h3>
+            <p>Lightweight squeeze filter removing 99.99999% of bacteria. Ideal for trekking.</p>
+            <div class="product-price">PKR 3,200</div>
+            <a href="/contact.html" class="btn btn-primary btn-sm" style="width:100%;justify-content:center;">Inquire to Buy</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="info-box" style="margin-top:40px;">
+        <p><strong>Sell Your Gear:</strong> Have quality adventure gear to sell? We accept pre-loved equipment on consignment. Contact us with photos and description — we'll list it in our shop and you earn 80% of the sale price.</p>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+  <a href="https://wa.me/923219810030" class="whatsapp-float" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
+<footer class="footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><img src="/public/logo.jpg" alt="Zarrar Adventures" class="footer-logo" /><div class="brand-name">Zarrar Adventures</div><p>Travel & Tourism (Pvt.) Ltd. — Est. 2017</p><span class="est">EST. 2017</span></div><div><h4>Quick Links</h4><ul><li><a href="/">Home</a></li><li><a href="/about.html">About</a></li><li><a href="/services.html">Services</a></li><li><a href="/training.html">Training</a></li><li><a href="/contact.html">Contact</a></li></ul></div><div><h4>Explore</h4><ul><li><a href="/shop.html">Shop</a></li><li><a href="/blog.html">Blog</a></li><li><a href="/opportunities.html">Opportunities</a></li><li><a href="/sustainability.html">Sustainability</a></li></ul></div><div class="footer-contact"><h4>Contact Us</h4><p>📍 Pakistan (HQ)</p><p>📞 +92 300219810030</p><p>✉️ info@zarraradventures.com</p><a href="https://wa.me/923219810030" class="whatsapp-btn" style="margin-top:16px;font-size:0.85rem;padding:10px 20px;display:inline-flex;">💬 WhatsApp Us</a>
+  
+ <div class="social-links" style="margin-top:15px;">
+            <a href="https://www.facebook.com/zarraradventures/" target="_blank" class="social-link">
+              <i class="fab fa-facebook-f"></i>
             </a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="services.html">Adventures</a></li>
-                <li><a href="training.html">Training</a></li>
-                <li><a href="shop.html" class="active">Equipment</a></li>
-                <li><a href="contact.html" class="btn">Book Now</a></li>
-            </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
-    </header>
 
-    <!-- Page Header -->
-    <section class="page-header" style="background-color: var(--primary-color); color: white; padding: 60px 0; text-align: center;">
-        <div class="container">
-            <h1>Equipment Store</h1>
-            <p>Gear up for your next adventure with our certified equipment.</p>
-        </div>
-    </section>
+            <a href="https://www.instagram.com/zarraradventures" target="_blank" class="social-link">
+              <i class="fab fa-instagram"></i>
+            </a>
 
-    <!-- Shop Listing -->
-    <section class="shop-listing">
-        <div class="container">
-            <div class="grid-3">
-                <div class="card product-card">
-                    <img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Tent" class="card-img">
-                    <div class="card-content">
-                        <h3>Expedition Tent</h3>
-                        <p class="product-price">PKR 25,000</p>
-                        <p>All-weather 3-person tent suitable for high altitude base camps.</p>
-                        <br>
-                        <a href="contact.html" class="btn">Inquire to Buy</a>
-                    </div>
-                </div>
-                <div class="card product-card">
-                    <img src="assets/images/sleeping bag.jfif" alt="Sleeping Bag" class="card-img">
-                    <div class="card-content">
-                        <h3>Down Sleeping Bag</h3>
-                        <p class="product-price">PKR 15,000</p>
-                        <p>-20°C rated sleeping bag for extreme cold conditions.</p>
-                        <br>
-                        <a href="contact.html" class="btn">Inquire to Buy</a>
-                    </div>
-                </div>
-                <div class="card product-card">
-                    <img src="assets/images/walking sticks.png" alt="Walking Sticks" class="card-img">
-                    <div class="card-content">
-                        <h3>Trekking Poles</h3>
-                        <p class="product-price">PKR 3,500</p>
-                        <p>Lightweight aluminum trekking poles, adjustable height.</p>
-                        <br>
-                        <a href="contact.html" class="btn">Inquire to Buy</a>
-                    </div>
-                </div>
-                <div class="card product-card">
-                    <img src="assets/images/water Bottle.png" alt="Water Bottle" class="card-img">
-                    <div class="card-content">
-                        <h3>Insulated Bottle</h3>
-                        <p class="product-price">PKR 2,000</p>
-                        <p>Keep your water cold or tea hot for 24 hours.</p>
-                        <br>
-                        <a href="contact.html" class="btn">Inquire to Buy</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+            <a href="#" target="_blank" class="social-link">
+              <i class="fab fa-youtube"></i>
+            </a>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-col">
-                    <h3>Zarrar Adventures</h3>
-                    <p>Your premier partner for adventure tourism, training, and equipment in Pakistan.</p>
-                </div>
-                <div class="footer-col">
-                    <h3>Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="training.html">Training</a></li>
-                        <li><a href="shop.html">Shop</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3>Contact Us</h3>
-                    <ul class="footer-links">
-                        <li><i class="fas fa-map-marker-alt"></i> Pakistan</li>
-                        <li><i class="fas fa-envelope"></i> info@zarraradventures.com</li>
-                        <li><i class="fas fa-phone"></i> +92 300 1234567</li>
-                    </ul>
-                    <div class="social-icons" style="margin-top: 20px;">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2024 Zarrar Adventures Travel & Tourism (Pvt.) Ltd. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+            <a href="#" target="_blank" class="social-link">
+              <i class="fab fa-tiktok"></i>
+            </a>
+          </div>  
+</div></div><div class="footer-bottom"><p>© 2024 Zarrar Adventures Travel & Tourism (Pvt.) Ltd. All rights reserved.</p></div></div></footer>
 
-    <!-- JS -->
-    <script src="assets/js/script.js"></script>
+<script src="/assets/js/script.js"></script>
 </body>
 </html>

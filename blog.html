@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog | Zarrar Adventures</title>
+  <meta name="description" content="Adventure stories, trekking guides, gear reviews and wilderness tips from the Zarrar Adventures team." />
+  <link rel="icon" href="/public/logo.jpg" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .fade-in.visible { opacity: 1; transform: none; }
+    .blog-card { background: #fff; border-radius: var(--radius); overflow: hidden; box-shadow: var(--card-shadow); transition: var(--transition); }
+    .blog-card:hover { transform: translateY(-6px); box-shadow: var(--card-shadow-hover); }
+    .blog-card img { width: 100%; height: 200px; object-fit: cover; }
+    .blog-body { padding: 24px; }
+    .blog-category { font-size: 0.72rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--burnt-orange); display: block; margin-bottom: 8px; }
+    .blog-body h3 { color: var(--midnight-blue); margin-bottom: 10px; font-size: 1.1rem; line-height: 1.4; }
+    .blog-meta { display: flex; gap: 14px; font-size: 0.78rem; color: var(--text-muted); margin-bottom: 12px; flex-wrap: wrap; }
+    .blog-excerpt { font-size: 0.88rem; line-height: 1.6; }
+    .read-more { display: inline-flex; align-items: center; gap: 6px; color: var(--burnt-orange); font-size: 0.85rem; font-weight: 600; margin-top: 14px; transition: gap 0.2s ease; font-family: 'Poppins', sans-serif; }
+    .read-more:hover { gap: 10px; }
+    .featured-post { background: #fff; border-radius: var(--radius); overflow: hidden; box-shadow: var(--card-shadow); display: grid; grid-template-columns: 1fr 1fr; }
+    .featured-post img { width: 100%; height: 100%; min-height: 320px; object-fit: cover; }
+    .featured-body { padding: 40px; display: flex; flex-direction: column; justify-content: center; }
+    .sidebar-card { background: #fff; border-radius: var(--radius); padding: 28px; box-shadow: var(--card-shadow); margin-bottom: 24px; }
+    .sidebar-card h4 { color: var(--midnight-blue); margin-bottom: 16px; padding-bottom: 12px; border-bottom: 2px solid var(--medium-gray); }
+    @media (max-width: 768px) { .featured-post { grid-template-columns: 1fr; } .featured-post img { min-height: 220px; } }
+  </style>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <a href="/" class="nav-brand"><img src="/public/logo.jpg" alt="Zarrar Adventures Logo" class="nav-logo" /><span class="nav-title">Zarrar <span class="accent">Adventures</span></span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/" class="nav-link">Home</a></li><li><a href="/about.html" class="nav-link">About</a></li><li><a href="/services.html" class="nav-link">Services</a></li><li><a href="/training.html" class="nav-link">Training</a></li><li><a href="/shop.html" class="nav-link">Shop</a></li><li><a href="/blog.html" class="nav-link">Blog</a></li><li><a href="/opportunities.html" class="nav-link">Opportunities</a></li><li><a href="/sustainability.html" class="nav-link">Sustainability</a></li><li><a href="/contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="mode-toggle" id="modeToggle"><span class="mode-dot"></span><span class="mode-text" id="modeText">Domestic</span></div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+  <div class="page-hero">
+    <div class="container">
+      <span class="section-label" style="color:rgba(255,255,255,0.6);">Stories & Insights</span>
+      <h1>Adventure Blog</h1>
+      <p>Trekking guides, gear reviews, expedition stories, and wilderness tips from our team.</p>
+      <div class="breadcrumb" style="justify-content:center;margin-top:16px;"><a href="/">Home</a><span class="sep">›</span><span class="current">Blog</span></div>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+
+      <!-- FEATURED POST -->
+      <div class="featured-post fade-in" style="margin-bottom:48px;">
+        <img src="/public/images/hero-mountains.jpg" alt="K2 Featured Post" />
+        <div class="featured-body">
+          <span class="blog-category">⭐ Featured Story</span>
+          <h2 style="color:var(--midnight-blue);margin-bottom:14px;line-height:1.3;">14 Days to K2 Base Camp: Everything You Need to Know</h2>
+          <div class="blog-meta"><span>📅 March 10, 2024</span><span>✍️ Zarrar Ahmed</span><span>⏱️ 8 min read</span></div>
+          <p style="font-size:0.95rem;">An in-depth guide to the legendary K2 Base Camp trek — from permits and gear to acclimatization, route conditions, and the indescribable moment you first lay eyes on the world's second-highest mountain...</p>
+          <a href="#" class="read-more" style="margin-top:20px;display:inline-flex;">Read Full Story →</a>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:2fr 1fr;gap:36px;" class="blog-layout">
+        <div>
+          <div class="grid-2 fade-in">
+
+            <div class="blog-card">
+              <img src="/public/images/fairy-meadows.jpg" alt="Blog Post" />
+              <div class="blog-body">
+                <span class="blog-category">Trekking Guide</span>
+                <div class="blog-meta"><span>📅 Feb 28, 2024</span><span>⏱️ 6 min</span></div>
+                <h3>Top 10 Treks in Pakistan for 2024</h3>
+                <p class="blog-excerpt">From the glaciated valleys of Karakoram to the lush meadows of Kaghan — here are our top picks for must-do treks this season.</p>
+                <a href="#" class="read-more">Read More →</a>
+              </div>
+            </div>
+
+            <div class="blog-card">
+              <img src="/public/images/k2-base-camp.jpg" alt="Blog Post" />
+              <div class="blog-body">
+                <span class="blog-category">Gear Review</span>
+                <div class="blog-meta"><span>📅 Feb 15, 2024</span><span>⏱️ 5 min</span></div>
+                <h3>Best Trekking Boots for Pakistani Mountains (Tested)</h3>
+                <p class="blog-excerpt">We tested 8 pairs of boots across 3 seasons. Here's our honest verdict on which ones actually perform at altitude.</p>
+                <a href="#" class="read-more">Read More →</a>
+              </div>
+            </div>
+
+            <div class="blog-card">
+              <img src="/public/images/hunza-valley.jpg" alt="Blog Post" />
+              <div class="blog-body">
+                <span class="blog-category">Survival Skills</span>
+                <div class="blog-meta"><span>📅 Jan 30, 2024</span><span>⏱️ 7 min</span></div>
+                <h3>Essential Wilderness Survival Skills Every Hiker Needs</h3>
+                <p class="blog-excerpt">Whether you're a weekend hiker or planning a multi-day expedition, these 10 survival skills could save your life in the wild.</p>
+                <a href="#" class="read-more">Read More →</a>
+              </div>
+            </div>
+
+            <div class="blog-card">
+              <img src="/public/images/deosai-plateau.jpg" alt="Blog Post" />
+              <div class="blog-body">
+                <span class="blog-category">Adventure Story</span>
+                <div class="blog-meta"><span>📅 Jan 12, 2024</span><span>⏱️ 9 min</span></div>
+                <h3>Deosai: A Night on the World's Second Highest Plateau</h3>
+                <p class="blog-excerpt">Camping at 4,114 meters under a blanket of stars with nothing but wilderness for miles — our team's most memorable night of the year.</p>
+                <a href="#" class="read-more">Read More →</a>
+              </div>
+            </div>
+
+            <div class="blog-card">
+              <img src="/public/images/wilderness-training.jpg" alt="Blog Post" />
+              <div class="blog-body">
+                <span class="blog-category">Training</span>
+                <div class="blog-meta"><span>📅 Dec 20, 2023</span><span>⏱️ 4 min</span></div>
+                <h3>How to Train for Your First High-Altitude Trek</h3>
+                <p class="blog-excerpt">A structured 12-week fitness program designed specifically for trekkers preparing for high-altitude adventures in Pakistan.</p>
+                <a href="#" class="read-more">Read More →</a>
+              </div>
+            </div>
+
+            <div class="blog-card">
+              <img src="/public/images/paragliding-skardu.jpg" alt="Blog Post" />
+              <div class="blog-body">
+                <span class="blog-category">Sustainability</span>
+                <div class="blog-meta"><span>📅 Dec 5, 2023</span><span>⏱️ 5 min</span></div>
+                <h3>Leave No Trace: Responsible Trekking in Pakistan</h3>
+                <p class="blog-excerpt">Pakistan's mountains are a treasure. Here's how every adventurer can contribute to keeping them pristine for future generations.</p>
+                <a href="#" class="read-more">Read More →</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- SIDEBAR -->
+        <div style="min-width:0;">
+          <div class="sidebar-card">
+            <h4>Categories</h4>
+            <ul style="display:flex;flex-direction:column;gap:8px;">
+              <li><a href="#" style="display:flex;justify-content:space-between;color:var(--text-dark);font-size:0.9rem;transition:var(--transition);" onmouseover="this.style.color='var(--burnt-orange)'" onmouseout="this.style.color='var(--text-dark)'">Trekking Guides <span style="color:var(--text-muted);">12</span></a></li>
+              <li><a href="#" style="display:flex;justify-content:space-between;color:var(--text-dark);font-size:0.9rem;transition:var(--transition);" onmouseover="this.style.color='var(--burnt-orange)'" onmouseout="this.style.color='var(--text-dark)'">Gear Reviews <span style="color:var(--text-muted);">8</span></a></li>
+              <li><a href="#" style="display:flex;justify-content:space-between;color:var(--text-dark);font-size:0.9rem;" onmouseover="this.style.color='var(--burnt-orange)'" onmouseout="this.style.color='var(--text-dark)'">Adventure Stories <span style="color:var(--text-muted);">15</span></a></li>
+              <li><a href="#" style="display:flex;justify-content:space-between;color:var(--text-dark);font-size:0.9rem;" onmouseover="this.style.color='var(--burnt-orange)'" onmouseout="this.style.color='var(--text-dark)'">Survival Skills <span style="color:var(--text-muted);">6</span></a></li>
+              <li><a href="#" style="display:flex;justify-content:space-between;color:var(--text-dark);font-size:0.9rem;" onmouseover="this.style.color='var(--burnt-orange)'" onmouseout="this.style.color='var(--text-dark)'">Training Tips <span style="color:var(--text-muted);">9</span></a></li>
+              <li><a href="#" style="display:flex;justify-content:space-between;color:var(--text-dark);font-size:0.9rem;" onmouseover="this.style.color='var(--burnt-orange)'" onmouseout="this.style.color='var(--text-dark)'">Sustainability <span style="color:var(--text-muted);">4</span></a></li>
+            </ul>
+          </div>
+          <div class="sidebar-card">
+            <h4>Popular Tags</h4>
+            <div style="display:flex;flex-wrap:wrap;gap:8px;">
+              <span style="padding:4px 12px;background:var(--light-gray);border-radius:16px;font-size:0.8rem;cursor:pointer;">#K2</span>
+              <span style="padding:4px 12px;background:var(--light-gray);border-radius:16px;font-size:0.8rem;cursor:pointer;">#Trekking</span>
+              <span style="padding:4px 12px;background:var(--light-gray);border-radius:16px;font-size:0.8rem;cursor:pointer;">#Survival</span>
+              <span style="padding:4px 12px;background:var(--light-gray);border-radius:16px;font-size:0.8rem;cursor:pointer;">#Hunza</span>
+              <span style="padding:4px 12px;background:var(--light-gray);border-radius:16px;font-size:0.8rem;cursor:pointer;">#GearReview</span>
+              <span style="padding:4px 12px;background:var(--light-gray);border-radius:16px;font-size:0.8rem;cursor:pointer;">#Pakistan</span>
+              <span style="padding:4px 12px;background:var(--light-gray);border-radius:16px;font-size:0.8rem;cursor:pointer;">#Camping</span>
+              <span style="padding:4px 12px;background:var(--light-gray);border-radius:16px;font-size:0.8rem;cursor:pointer;">#Deosai</span>
+            </div>
+          </div>
+          <div class="sidebar-card" style="background:linear-gradient(135deg,var(--forest-green),var(--midnight-blue));color:#fff;">
+            <h4 style="color:#fff;border-bottom-color:rgba(255,255,255,0.2);">📩 Newsletter</h4>
+            <p style="color:rgba(255,255,255,0.8);font-size:0.88rem;margin-bottom:16px;">Get adventure stories and trip deals delivered to your inbox.</p>
+            <form data-form="newsletter">
+              <input class="form-control" type="email" placeholder="Your email address" style="background:rgba(255,255,255,0.15);border-color:rgba(255,255,255,0.3);color:#fff;margin-bottom:10px;" />
+              <button type="submit" class="btn btn-primary btn-sm" style="width:100%;justify-content:center;">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+  <a href="https://wa.me/923219810030" class="whatsapp-float" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<footer class="footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><img src="/public/logo.jpg" alt="Zarrar Adventures" class="footer-logo" /><div class="brand-name">Zarrar Adventures</div><p>Travel & Tourism (Pvt.) Ltd. — Est. 2017</p><span class="est">EST. 2017</span></div><div><h4>Quick Links</h4><ul><li><a href="/">Home</a></li><li><a href="/about.html">About</a></li><li><a href="/services.html">Services</a></li><li><a href="/training.html">Training</a></li><li><a href="/contact.html">Contact</a></li></ul></div><div><h4>Explore</h4><ul><li><a href="/shop.html">Shop</a></li><li><a href="/blog.html">Blog</a></li><li><a href="/opportunities.html">Opportunities</a></li><li><a href="/sustainability.html">Sustainability</a></li></ul></div><div class="footer-contact"><h4>Contact Us</h4><p>📍 Pakistan (HQ)</p><p>📞 +92 321 9810030</p><p>✉️ info@zarraradventures.com</p><a href="https://wa.me/923219810030" class="whatsapp-btn" style="margin-top:16px;font-size:0.85rem;padding:10px 20px;display:inline-flex;">💬 WhatsApp Us</a>
+
+ <div class="social-links" style="margin-top:15px;">
+            <a href="https://www.facebook.com/zarraradventures/" target="_blank" class="social-link">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+
+            <a href="https://www.instagram.com/zarraradventures" target="_blank" class="social-link">
+              <i class="fab fa-instagram"></i>
+            </a>
+
+            <a href="#" target="_blank" class="social-link">
+              <i class="fab fa-youtube"></i>
+            </a>
+
+            <a href="#" target="_blank" class="social-link">
+              <i class="fab fa-tiktok"></i>
+            </a>
+          </div>
+
+</div></div><div class="footer-bottom"><p>© 2024 Zarrar Adventures Travel & Tourism (Pvt.) Ltd. All rights reserved.</p></div></div></footer>
+
+<style>@media(max-width:768px){.blog-layout{grid-template-columns:1fr!important;}}</style>
+<script src="/assets/js/script.js"></script>
+</body>
+</html>

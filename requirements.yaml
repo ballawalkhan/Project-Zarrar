@@ -1,0 +1,17 @@
+packages:
+  "framer-motion": "For premium scroll animations and smooth page transitions"
+  "clsx": "Utility for conditionally joining classNames"
+  "tailwind-merge": "Utility to merge tailwind classes safely"
+  "react-hook-form": "For robust form state management"
+  "@hookform/resolvers": "Zod integration for forms"
+  "zod": "Schema validation for forms"
+
+images:
+  - path: "artifacts/zarrar-adventures/public/images/topographic-pattern.png"
+    description: "Subtle, minimal topographic map line pattern in dark forest green on a transparent background, used for section backgrounds"
+    aspect_ratio: "16:9"
+
+notes:
+  - Frontend only application with Wouter for routing
+  - Forms use local state and display toasts on submission
+  - Using Unsplash images for photography, generated images for patterns

@@ -1,157 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Training & Institute - Zarrar Adventures</title>
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
-    <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    
-    <!-- Favicon -->
-    <link rel="icon" href="assets/images/logo.png" type="image/png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Training | Zarrar Adventures</title>
+  <meta name="description" content="Professional outdoor training courses: Bushcraft, Survival, Wilderness First Aid. Beginner to Professional levels." />
+  <link rel="icon" href="/public/logo.jpg" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">    
+  <style>
+    .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .fade-in.visible { opacity: 1; transform: none; }
+    .course-card { background: #fff; border-radius: var(--radius); overflow: hidden; box-shadow: var(--card-shadow); transition: var(--transition); }
+    .course-card:hover { transform: translateY(-6px); box-shadow: var(--card-shadow-hover); }
+    .course-icon-header { padding: 36px; text-align: center; font-size: 3rem; }
+    .course-body { padding: 24px; }
+    .course-body h3 { color: var(--midnight-blue); margin-bottom: 10px; }
+    .course-meta { display: flex; gap: 10px; flex-wrap: wrap; margin: 12px 0; }
+    .course-meta span { font-size: 0.78rem; padding: 3px 10px; border-radius: 16px; background: var(--light-gray); color: var(--text-muted); }
+    .checklist li { font-size: 0.88rem; color: var(--text-muted); padding: 6px 0; border-bottom: 1px solid var(--medium-gray); display: flex; align-items: center; gap: 8px; }
+    .checklist li:last-child { border-bottom: none; }
+    .checklist li::before { content: '✅'; font-size: 0.85rem; }
+  </style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container navbar">
-            <a href="index.html" class="logo">
-                <img src="assets/images/logo.png" alt="Zarrar Adventures Logo">
-            </a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="services.html">Adventures</a></li>
-                <li><a href="training.html" class="active">Training</a></li>
-                <li><a href="shop.html">Equipment</a></li>
-                <li><a href="contact.html" class="btn">Book Now</a></li>
+
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <a href="/" class="nav-brand"><img src="/public/logo.jpg" alt="Zarrar Adventures Logo" class="nav-logo" /><span class="nav-title">Zarrar <span class="accent">Adventures</span></span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/" class="nav-link">Home</a></li><li><a href="/about.html" class="nav-link">About</a></li><li><a href="/services.html" class="nav-link">Services</a></li><li><a href="/training.html" class="nav-link">Training</a></li><li><a href="/shop.html" class="nav-link">Shop</a></li><li><a href="/blog.html" class="nav-link">Blog</a></li><li><a href="/opportunities.html" class="nav-link">Opportunities</a></li><li><a href="/sustainability.html" class="nav-link">Sustainability</a></li><li><a href="/contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="mode-toggle" id="modeToggle"><span class="mode-dot"></span><span class="mode-text" id="modeText">Domestic</span></div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+  <div class="page-hero">
+    <div class="container">
+      <span class="section-label" style="color:rgba(255,255,255,0.6);">Build Your Skills</span>
+      <h1>Outdoor Training</h1>
+      <p>Professional wilderness courses designed to develop skilled, confident, and resilient outdoor athletes.</p>
+      <div class="breadcrumb" style="justify-content:center;margin-top:16px;"><a href="/">Home</a><span class="sep">›</span><span class="current">Training</span></div>
+    </div>
+  </div>
+
+  <!-- COURSES -->
+  <section class="section">
+    <div class="container">
+      <span class="section-label" style="display:block;text-align:center;">Our Programs</span>
+      <h2 class="section-title">Outdoor Training Courses</h2>
+      <p class="section-subtitle">Learn from certified professionals in real wilderness environments. Our courses combine theory with intense practical application.</p>
+      <div class="grid-3 fade-in">
+        <div class="course-card">
+          <div class="course-icon-header" style="background:linear-gradient(135deg,var(--forest-green),#1a6b4a);">🪓</div>
+          <div class="course-body">
+            <span class="card-tag">Most Popular</span>
+            <h3>Bushcraft Fundamentals</h3>
+            <p>Master the ancient art of wilderness living. Learn to build shelters, start fires, find water, and forage for food in Pakistan's wild terrain.</p>
+            <div class="course-meta">
+              <span>⏱️ 3 Days</span>
+              <span>👥 Max 12</span>
+              <span>🌿 All Seasons</span>
+            </div>
+            <ul class="checklist">
+              <li>Fire starting techniques</li>
+              <li>Natural shelter construction</li>
+              <li>Water sourcing & purification</li>
+              <li>Wild plant identification</li>
+              <li>Navigation without GPS</li>
             </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-top:20px;">
+              <span style="font-family:Poppins,sans-serif;font-size:1.1rem;font-weight:700;color:var(--burnt-orange);">PKR 12,000</span>
+              <a href="/contact.html" class="btn btn-primary btn-sm">Enroll Now</a>
             </div>
+          </div>
         </div>
-    </header>
-
-    <!-- Page Header -->
-    <section class="page-header" style="background-color: var(--primary-color); color: white; padding: 60px 0; text-align: center;">
-        <div class="container">
-            <h1>Training Institute</h1>
-            <p>Empowering the next generation of adventurers and guides.</p>
+        <div class="course-card">
+          <div class="course-icon-header" style="background:linear-gradient(135deg,var(--midnight-blue),#1a3a5c);">🆘</div>
+          <div class="course-body">
+            <span class="card-tag">Essential</span>
+            <h3>Wilderness Survival</h3>
+            <p>Prepare for emergency situations in remote environments. This course teaches life-saving skills for when things go wrong in the wild.</p>
+            <div class="course-meta">
+              <span>⏱️ 5 Days</span>
+              <span>👥 Max 10</span>
+              <span>🏔️ Multi-terrain</span>
+            </div>
+            <ul class="checklist">
+              <li>Emergency signaling & rescue</li>
+              <li>Improvised tools & weapons</li>
+              <li>Cold weather survival</li>
+              <li>Basic wilderness first aid</li>
+              <li>Mental survival psychology</li>
+            </ul>
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-top:20px;">
+              <span style="font-family:Poppins,sans-serif;font-size:1.1rem;font-weight:700;color:var(--burnt-orange);">PKR 18,000</span>
+              <a href="/contact.html" class="btn btn-primary btn-sm">Enroll Now</a>
+            </div>
+          </div>
         </div>
-    </section>
-
-    <!-- Training Programs -->
-    <section class="training-programs">
-        <div class="container">
-            <div class="section-title">
-                <h2>Our Training Programs</h2>
-                <p>Comprehensive courses designed for enthusiasts and professionals alike.</p>
+        <div class="course-card">
+          <div class="course-icon-header" style="background:linear-gradient(135deg,#c95e22,var(--burnt-orange));">🏥</div>
+          <div class="course-body">
+            <span class="card-tag">Certified</span>
+            <h3>Wilderness First Aid</h3>
+            <p>Learn to assess, stabilize, and treat medical emergencies in remote areas where professional help can take hours to arrive.</p>
+            <div class="course-meta">
+              <span>⏱️ 4 Days</span>
+              <span>👥 Max 15</span>
+              <span>📜 Certificate</span>
             </div>
-            
-            <div class="grid-3">
-                <div class="card">
-                    <div class="card-content">
-                        <h3>Poly-Athlete Program</h3>
-                        <p>A rigorous training program designed to build endurance, strength, and skills across multiple disciplines including running, climbing, and swimming.</p>
-                        <br>
-                        <a href="contact.html" class="btn" style="font-size: 0.8rem;">Apply Now</a>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-content">
-                        <h3>Guide & Safety Certification</h3>
-                        <p>Professional certification for aspiring mountain guides, covering navigation, first aid, rescue techniques, and client management.</p>
-                        <br>
-                        <a href="contact.html" class="btn" style="font-size: 0.8rem;">Apply Now</a>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-content">
-                        <h3>Basic Mountaineering Course</h3>
-                        <p>Learn the fundamentals of mountaineering, including knot tying, belaying, crampon use, and ice axe self-arrest.</p>
-                        <br>
-                        <a href="contact.html" class="btn" style="font-size: 0.8rem;">Apply Now</a>
-                    </div>
-                </div>
+            <ul class="checklist">
+              <li>Patient assessment system</li>
+              <li>Fracture & sprain management</li>
+              <li>Altitude sickness treatment</li>
+              <li>Wound care & infection control</li>
+              <li>Emergency evacuation planning</li>
+            </ul>
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-top:20px;">
+              <span style="font-family:Poppins,sans-serif;font-size:1.1rem;font-weight:700;color:var(--burnt-orange);">PKR 15,000</span>
+              <a href="/contact.html" class="btn btn-primary btn-sm">Enroll Now</a>
             </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Levels -->
-    <section class="training-levels" style="background-color: var(--light-bg);">
-        <div class="container">
-            <div class="section-title">
-                <h2>Training Levels</h2>
-            </div>
-            <div style="display: flex; flex-wrap: wrap; justify-content: space-around; gap: 20px;">
-                <div style="text-align: center; max-width: 300px;">
-                    <div style="font-size: 3rem; color: var(--accent-color); margin-bottom: 10px;">1</div>
-                    <h3>Beginner</h3>
-                    <p>For those new to the outdoors. Focus on safety basics, fitness, and introductory skills.</p>
-                </div>
-                <div style="text-align: center; max-width: 300px;">
-                    <div style="font-size: 3rem; color: var(--accent-color); margin-bottom: 10px;">2</div>
-                    <h3>Advanced</h3>
-                    <p>For experienced individuals looking to refine their skills and take on technical challenges.</p>
-                </div>
-                <div style="text-align: center; max-width: 300px;">
-                    <div style="font-size: 3rem; color: var(--accent-color); margin-bottom: 10px;">3</div>
-                    <h3>Professional</h3>
-                    <p>For those seeking a career in adventure tourism. Includes leadership and rescue training.</p>
-                </div>
-            </div>
+  <!-- TRAINING LEVELS -->
+  <section class="section bg-light">
+    <div class="container">
+      <span class="section-label" style="display:block;text-align:center;">Your Path</span>
+      <h2 class="section-title">Training Levels</h2>
+      <p class="section-subtitle">We meet you where you are. Choose your level and grow into a complete outdoor athlete.</p>
+      <div class="grid-3 fade-in">
+        <div class="level-card level-beginner">
+          <div style="font-size:2.5rem;margin-bottom:16px;">🌱</div>
+          <span class="level-badge badge-green">Beginner</span>
+          <h3>No Experience Needed</h3>
+          <p>Perfect for first-timers. Learn the foundational skills of outdoor living in a safe, supportive environment. Courses designed for zero prior experience.</p>
+          <br/>
+          <ul style="font-size:0.88rem;color:var(--text-muted);display:flex;flex-direction:column;gap:8px;margin-top:8px;">
+            <li>🟢 Day hikes & nature walks</li>
+            <li>🟢 Basic campfire skills</li>
+            <li>🟢 Beginner navigation</li>
+            <li>🟢 Introduction to gear</li>
+          </ul>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-col">
-                    <h3>Zarrar Adventures</h3>
-                    <p>Your premier partner for adventure tourism, training, and equipment in Pakistan.</p>
-                </div>
-                <div class="footer-col">
-                    <h3>Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="training.html">Training</a></li>
-                        <li><a href="shop.html">Shop</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3>Contact Us</h3>
-                    <ul class="footer-links">
-                        <li><i class="fas fa-map-marker-alt"></i> Pakistan</li>
-                        <li><i class="fas fa-envelope"></i> info@zarraradventures.com</li>
-                        <li><i class="fas fa-phone"></i> +92 300 1234567</li>
-                    </ul>
-                    <div class="social-icons" style="margin-top: 20px;">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2024 Zarrar Adventures Travel & Tourism (Pvt.) Ltd. All rights reserved.</p>
-            </div>
+        <div class="level-card level-intermediate">
+          <div style="font-size:2.5rem;margin-bottom:16px;">🔥</div>
+          <span class="level-badge badge-orange">Intermediate</span>
+          <h3>Build On Your Skills</h3>
+          <p>For those with some outdoor experience ready to push further. Multi-day expeditions, technical skills, and deeper wilderness knowledge.</p>
+          <br/>
+          <ul style="font-size:0.88rem;color:var(--text-muted);display:flex;flex-direction:column;gap:8px;margin-top:8px;">
+            <li>🟡 Multi-day treks</li>
+            <li>🟡 Advanced fire & shelter</li>
+            <li>🟡 Map & compass navigation</li>
+            <li>🟡 Basic climbing techniques</li>
+          </ul>
         </div>
-    </footer>
+        <div class="level-card level-professional">
+          <div style="font-size:2.5rem;margin-bottom:16px;">🏆</div>
+          <span class="level-badge badge-blue">Professional</span>
+          <h3>Expert Certification</h3>
+          <p>Advanced programs for aspiring outdoor professionals, guides, and athletes. Industry-recognized certifications upon completion.</p>
+          <br/>
+          <ul style="font-size:0.88rem;color:var(--text-muted);display:flex;flex-direction:column;gap:8px;margin-top:8px;">
+            <li>🔵 High-altitude mountaineering</li>
+            <li>🔵 Guide certification prep</li>
+            <li>🔵 Advanced wilderness medicine</li>
+            <li>🔵 Technical rope systems</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- JS -->
-    <script src="assets/js/script.js"></script>
+  <!-- BENEFITS -->
+  <section class="section">
+    <div class="container">
+      <div class="grid-2-1 fade-in">
+        <div>
+          <span class="section-label">Why Train With Us</span>
+          <h2>Physical & Mental Benefits</h2>
+          <p style="margin:16px 0 28px;">Our training programs are designed to transform you from the inside out — building not just physical capability, but mental resilience, emotional strength, and a deep connection with the natural world.</p>
+          <div class="grid-2" style="gap:20px;">
+            <div style="background:var(--light-gray);border-radius:var(--radius);padding:24px;">
+              <div style="font-size:1.8rem;margin-bottom:10px;">💪</div>
+              <h4 style="color:var(--midnight-blue);">Physical Strength</h4>
+              <p style="font-size:0.88rem;">Cardiovascular endurance, muscle strength, and overall fitness through natural terrain challenges.</p>
+            </div>
+            <div style="background:var(--light-gray);border-radius:var(--radius);padding:24px;">
+              <div style="font-size:1.8rem;margin-bottom:10px;">🧠</div>
+              <h4 style="color:var(--midnight-blue);">Mental Clarity</h4>
+              <p style="font-size:0.88rem;">Reduce anxiety and stress. Nature-based training is scientifically proven to improve mental well-being.</p>
+            </div>
+            <div style="background:var(--light-gray);border-radius:var(--radius);padding:24px;">
+              <div style="font-size:1.8rem;margin-bottom:10px;">🎯</div>
+              <h4 style="color:var(--midnight-blue);">Problem Solving</h4>
+              <p style="font-size:0.88rem;">Real-world challenges sharpen decision-making, creativity, and critical thinking under pressure.</p>
+            </div>
+            <div style="background:var(--light-gray);border-radius:var(--radius);padding:24px;">
+              <div style="font-size:1.8rem;margin-bottom:10px;">🤝</div>
+              <h4 style="color:var(--midnight-blue);">Team & Leadership</h4>
+              <p style="font-size:0.88rem;">Group training cultivates natural leadership, communication, and trust in team environments.</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <img src="/public/images/wilderness-training.jpg" alt="Training" style="width:100%;height:480px;object-fit:cover;border-radius:var(--radius);" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+  <a href="https://wa.me/923219810030" class="whatsapp-float" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
+<footer class="footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><img src="/public/logo.jpg" alt="Zarrar Adventures" class="footer-logo" /><div class="brand-name">Zarrar Adventures</div><p>Travel & Tourism (Pvt.) Ltd. — Est. 2017</p><span class="est">EST. 2017</span></div><div><h4>Quick Links</h4><ul><li><a href="/">Home</a></li><li><a href="/about.html">About</a></li><li><a href="/services.html">Services</a></li><li><a href="/training.html">Training</a></li><li><a href="/contact.html">Contact</a></li></ul></div><div><h4>Explore</h4><ul><li><a href="/shop.html">Shop</a></li><li><a href="/blog.html">Blog</a></li><li><a href="/opportunities.html">Opportunities</a></li><li><a href="/sustainability.html">Sustainability</a></li></ul></div><div class="footer-contact"><h4>Contact Us</h4><p>📍 Pakistan (HQ)</p><p>📞 +92 3219810030</p><p>✉️ info@zarraradventures.com</p><a href="https://wa.me/923219810030" class="whatsapp-btn" style="margin-top:16px;font-size:0.85rem;padding:10px 20px;display:inline-flex;">💬 WhatsApp Us</a>
+  
+  <div class="social-links" style="margin-top:15px;">
+            <a href="https://www.facebook.com/zarraradventures/" target="_blank" class="social-link">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+
+            <a href="https://www.instagram.com/zarraradventures" target="_blank" class="social-link">
+              <i class="fab fa-instagram"></i>
+            </a>
+
+            <a href="#" target="_blank" class="social-link">
+              <i class="fab fa-youtube"></i>
+            </a>
+
+            <a href="#" target="_blank" class="social-link">
+              <i class="fab fa-tiktok"></i>
+            </a>
+          </div>
+
+</div></div><div class="footer-bottom"><p>© 2024 Zarrar Adventures Travel & Tourism (Pvt.) Ltd. All rights reserved.</p></div></div></footer>
+
+<script src="/assets/js/script.js"></script>
 </body>
 </html>

@@ -1,165 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adventures & Services - Zarrar Adventures</title>
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
-    <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    
-    <!-- Favicon -->
-    <link rel="icon" href="assets/images/logo.png" type="image/png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services | Zarrar Adventures</title>
+  <meta name="description" content="Road trips, trekking, mountaineering, paragliding, corporate tours and more with Zarrar Adventures." />
+  <link rel="icon" href="public/logo.jpg" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .fade-in.visible { opacity: 1; transform: none; }
+    .service-detail-card { border-radius: var(--radius); overflow: hidden; box-shadow: var(--card-shadow); transition: var(--transition); }
+    .service-detail-card:hover { transform: translateY(-6px); box-shadow: var(--card-shadow-hover); }
+    .service-detail-card img { width: 100%; height: 220px; object-fit: cover; }
+    .service-detail-body { padding: 28px; }
+    .service-detail-body h3 { color: var(--midnight-blue); margin-bottom: 10px; }
+    .service-meta { display: flex; gap: 16px; flex-wrap: wrap; margin: 14px 0; }
+    .service-meta span { font-size: 0.82rem; color: var(--text-muted); display: flex; align-items: center; gap: 5px; background: var(--light-gray); padding: 4px 10px; border-radius: 20px; }
+    .price-tag { font-family: 'Poppins', sans-serif; font-size: 1.1rem; font-weight: 700; color: var(--burnt-orange); }
+  </style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container navbar">
-            <a href="index.html" class="logo">
-                <img src="assets/images/logo.png" alt="Zarrar Adventures Logo">
+
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <a href="/" class="nav-brand"><img src="public/logo.jpg" alt="Zarrar Adventures Logo" class="nav-logo" /><span class="nav-title">Zarrar <span class="accent">Adventures</span></span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/" class="nav-link">Home</a></li><li><a href="/about.html" class="nav-link">About</a></li><li><a href="/services.html" class="nav-link">Services</a></li><li><a href="/training.html" class="nav-link">Training</a></li><li><a href="/shop.html" class="nav-link">Shop</a></li><li><a href="/blog.html" class="nav-link">Blog</a></li><li><a href="/opportunities.html" class="nav-link">Opportunities</a></li><li><a href="/sustainability.html" class="nav-link">Sustainability</a></li><li><a href="/contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="mode-toggle" id="modeToggle"><span class="mode-dot"></span><span class="mode-text" id="modeText">Domestic</span></div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+  <div class="page-hero">
+    <div class="container">
+      <span class="section-label" style="color:rgba(255,255,255,0.6);">What We Do</span>
+      <h1>Our Services</h1>
+      <p>From group road trips to professional mountaineering — we offer the full spectrum of adventure experiences.</p>
+      <div class="breadcrumb" style="justify-content:center;margin-top:16px;"><a href="/">Home</a><span class="sep">›</span><span class="current">Services</span></div>
+    </div>
+  </div>
+
+  <!-- ROAD TRIPS -->
+  <section class="section" id="road-trips">
+    <div class="container">
+      <span class="section-label" style="display:block;text-align:center;">Discover Pakistan</span>
+      <h2 class="section-title">Road Trips</h2>
+      <p class="section-subtitle">Explore Pakistan's stunning landscapes via meticulously planned group and custom road adventures.</p>
+      <div class="grid-3 fade-in">
+        <div class="service-detail-card">
+          <img src="public/images/fairy-meadows.jpg" alt="Road Trip" />
+          <div class="service-detail-body">
+            <span class="card-tag">Group Tour</span>
+            <h3>Karakoram Highway Circuit</h3>
+            <p>Journey along one of the world's highest paved roads through Gilgit-Baltistan, Hunza, and Skardu.</p>
+            <div class="service-meta"><span>📅 10 Days</span><span>👥 8–20 People</span><span>🌄 All Seasons</span></div>
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-top:16px;">
+              <span class="price-tag" data-pkr="PKR 45,000" data-usd="USD 160">PKR 45,000</span>
+              <a href="/contact.html" class="btn btn-primary btn-sm">Book Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="service-detail-card">
+          <img src="public/images/swat-valley.jpg" alt="Road Trip" />
+          <div class="service-detail-body">
+            <span class="card-tag">Custom Tour</span>
+            <h3>Swat & Kaghan Valley Drive</h3>
+            <p>Custom road trip through the lush green valleys of Swat and Kaghan with flexible itineraries for your group.</p>
+            <div class="service-meta"><span>📅 5–7 Days</span><span>👥 2–15 People</span><span>🌸 Spring/Summer</span></div>
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-top:16px;">
+              <span class="price-tag">PKR 28,000</span>
+              <a href="/contact.html" class="btn btn-primary btn-sm">Book Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="service-detail-card">
+          <img src="public/images/hero-mountains.jpg" alt="Balochistan" />
+          <div class="service-detail-body">
+            <span class="card-tag">Custom Tour</span>
+            <h3>Balochistan Desert & Coast</h3>
+            <p>An epic custom journey through Balochistan's rugged deserts, dramatic canyons, and pristine coastline.</p>
+            <div class="service-meta"><span>📅 8 Days</span><span>👥 4–12 People</span><span>❄️ Winter Only</span></div>
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-top:16px;">
+              <span class="price-tag">PKR 55,000</span>
+              <a href="/contact.html" class="btn btn-primary btn-sm">Book Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUTDOOR ACTIVITIES -->
+  <section class="section bg-light" id="outdoor">
+    <div class="container">
+      <span class="section-label" style="display:block;text-align:center;">Push Your Limits</span>
+      <h2 class="section-title">Outdoor Activities</h2>
+      <p class="section-subtitle">Professional guided outdoor adventures — from beginner treks to technical mountaineering expeditions.</p>
+      <div class="grid-4 fade-in">
+        <div class="card" style="text-align:center;">
+          <div style="height:160px;background:linear-gradient(135deg,var(--midnight-blue),var(--forest-green));display:flex;align-items:center;justify-content:center;font-size:3.5rem;">🥾</div>
+          <div class="card-body">
+            <h3 style="color:var(--midnight-blue);">Trekking</h3>
+            <p style="font-size:0.88rem;">Multi-day treks to K2, Nanga Parbat, Broad Peak base camps and beyond. All levels welcome.</p>
+            <a href="/contact.html" class="btn btn-primary btn-sm" style="margin-top:16px;">Inquire</a>
+          </div>
+        </div>
+        <div class="card" style="text-align:center;">
+          <div style="height:160px;background:linear-gradient(135deg,#1a3a5c,var(--midnight-blue));display:flex;align-items:center;justify-content:center;font-size:3.5rem;">🧗</div>
+          <div class="card-body">
+            <h3 style="color:var(--midnight-blue);">Rock Climbing</h3>
+            <p style="font-size:0.88rem;">From beginner bouldering to technical multi-pitch climbing in world-class locations.</p>
+            <a href="/contact.html" class="btn btn-primary btn-sm" style="margin-top:16px;">Inquire</a>
+          </div>
+        </div>
+        <div class="card" style="text-align:center;">
+          <div style="height:160px;background:linear-gradient(135deg,var(--burnt-orange),#c95e22);display:flex;align-items:center;justify-content:center;font-size:3.5rem;">🪂</div>
+          <div class="card-body">
+            <h3 style="color:var(--midnight-blue);">Paragliding</h3>
+            <p style="font-size:0.88rem;">Tandem paragliding flights over Skardu, Hunza, and Kaghan valleys with certified pilots.</p>
+            <a href="/contact.html" class="btn btn-primary btn-sm" style="margin-top:16px;">Inquire</a>
+          </div>
+        </div>
+        <div class="card" style="text-align:center;">
+          <div style="height:160px;background:linear-gradient(135deg,#1a6b4a,var(--forest-green));display:flex;align-items:center;justify-content:center;font-size:3.5rem;">⛰️</div>
+          <div class="card-body">
+            <h3 style="color:var(--midnight-blue);">Mountaineering</h3>
+            <p style="font-size:0.88rem;">Technical mountain climbing expeditions to 5000m–7000m+ peaks in the Karakoram range.</p>
+            <a href="/contact.html" class="btn btn-primary btn-sm" style="margin-top:16px;">Inquire</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CORPORATE & STUDY TRIPS -->
+  <section class="section" id="corporate">
+    <div class="container">
+      <span class="section-label" style="display:block;text-align:center;">Groups & Organizations</span>
+      <h2 class="section-title">Corporate & Study Trips</h2>
+      <p class="section-subtitle">Tailored outdoor experiences for companies, schools, and universities that build teamwork, leadership, and resilience.</p>
+      <div class="grid-2 fade-in">
+        <div class="card">
+          <div style="height:200px;background:url('/public/images/corporate-team.jpg') center/cover;"></div>
+          <div class="card-body">
+            <span class="card-tag">Corporate</span>
+            <h3 class="card-title">Team Building Expeditions</h3>
+            <p class="card-text">Custom designed mountain adventures that challenge teams, build trust, and create shared experiences that last a lifetime. Full planning, transport, meals, and safety management included.</p>
+            <div style="margin-top:16px;display:flex;gap:10px;flex-wrap:wrap;">
+              <span style="font-size:0.82rem;padding:4px 12px;background:var(--light-gray);border-radius:20px;">Half-Day Options</span>
+              <span style="font-size:0.82rem;padding:4px 12px;background:var(--light-gray);border-radius:20px;">Multi-Day Retreats</span>
+              <span style="font-size:0.82rem;padding:4px 12px;background:var(--light-gray);border-radius:20px;">Custom Theming</span>
+            </div>
+            <a href="/contact.html" class="btn btn-green btn-sm" style="margin-top:20px;display:inline-block;">Get Corporate Quote</a>
+          </div>
+        </div>
+        <div class="card">
+          <div style="height:200px;background:url('/public/images/school-trip.jpg') center/cover;"></div>
+          <div class="card-body">
+            <span class="card-tag">Education</span>
+            <h3 class="card-title">School & University Study Trips</h3>
+            <p class="card-text">Educational field trips combining adventure with learning — geography, ecology, environmental science, and leadership programs for schools, colleges, and universities across Pakistan.</p>
+            <div style="margin-top:16px;display:flex;gap:10px;flex-wrap:wrap;">
+              <span style="font-size:0.82rem;padding:4px 12px;background:var(--light-gray);border-radius:20px;">Safety Assured</span>
+              <span style="font-size:0.82rem;padding:4px 12px;background:var(--light-gray);border-radius:20px;">Educational Content</span>
+              <span style="font-size:0.82rem;padding:4px 12px;background:var(--light-gray);border-radius:20px;">Chaperone Support</span>
+            </div>
+            <a href="/contact.html" class="btn btn-primary btn-sm" style="margin-top:20px;display:inline-block;">Request School Trip</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING INFO / DISCLAIMER -->
+  <section class="section bg-light">
+    <div class="container" style="max-width:800px;">
+      <h2 class="section-title">Booking Information</h2>
+      <div class="info-box" style="margin-bottom:24px;">
+        <p><strong>50% Advance Payment:</strong> A 50% deposit is required to confirm all bookings. The remaining balance is due 3 days before departure.</p>
+      </div>
+      <div class="grid-2">
+        <div style="background:#fff;border-radius:var(--radius);padding:28px;box-shadow:var(--card-shadow);">
+          <h4 style="color:var(--midnight-blue);margin-bottom:12px;">⚠️ Safety Disclaimer</h4>
+          <p style="font-size:0.88rem;">All outdoor activities carry inherent risks. Participants are required to read and acknowledge our safety guidelines before joining any expedition. Zarrar Adventures maintains full safety equipment and certified guides on all tours.</p>
+        </div>
+        <div style="background:#fff;border-radius:var(--radius);padding:28px;box-shadow:var(--card-shadow);">
+          <h4 style="color:var(--midnight-blue);margin-bottom:12px;">📋 What's Included</h4>
+          <ul style="font-size:0.88rem;color:var(--text-muted);display:flex;flex-direction:column;gap:8px;">
+            <li>✅ Certified guides & support staff</li>
+            <li>✅ Transportation (where specified)</li>
+            <li>✅ Safety & first-aid equipment</li>
+            <li>✅ Meals during expedition</li>
+            <li>✅ Group camping equipment</li>
+          </ul>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:36px;">
+        <a href="/contact.html" class="btn btn-primary btn-lg">Book Your Adventure</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+  <a href="https://wa.me/923219810030" class="whatsapp-float" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
+<footer class="footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><img src="public/logo.jpg" alt="Zarrar Adventures" class="footer-logo" /><div class="brand-name">Zarrar Adventures</div><p>Travel & Tourism (Pvt.) Ltd. — Est. 2017</p><span class="est">EST. 2017</span></div><div><h4>Quick Links</h4><ul><li><a href="/">Home</a></li><li><a href="/about.html">About</a></li><li><a href="/services.html">Services</a></li><li><a href="/training.html">Training</a></li><li><a href="/contact.html">Contact</a></li></ul></div><div><h4>Explore</h4><ul><li><a href="/shop.html">Shop</a></li><li><a href="/blog.html">Blog</a></li><li><a href="/opportunities.html">Opportunities</a></li><li><a href="/sustainability.html">Sustainability</a></li></ul></div><div class="footer-contact"><h4>Contact Us</h4><p>📍 Pakistan (HQ)</p><p>📞 +92 3219810030</p><p>✉️ info@zarraradventures.com</p><a href="https://wa.me/923219810030" class="whatsapp-btn" style="margin-top:16px;font-size:0.85rem;padding:10px 20px;display:inline-flex;">💬 WhatsApp Us</a>
+  
+ <div class="social-links" style="margin-top:15px;">
+            <a href="https://www.facebook.com/zarraradventures/" target="_blank" class="social-link">
+              <i class="fab fa-facebook-f"></i>
             </a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="services.html" class="active">Adventures</a></li>
-                <li><a href="training.html">Training</a></li>
-                <li><a href="shop.html">Equipment</a></li>
-                <li><a href="contact.html" class="btn">Book Now</a></li>
-            </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
-    </header>
 
-    <!-- Page Header -->
-    <section class="page-header" style="background-color: var(--primary-color); color: white; padding: 60px 0; text-align: center;">
-        <div class="container">
-            <h1>Adventures & Services</h1>
-            <p>Explore our diverse range of activities tailored for every adventurer.</p>
-        </div>
-    </section>
+            <a href="https://www.instagram.com/zarraradventures" target="_blank" class="social-link">
+              <i class="fab fa-instagram"></i>
+            </a>
 
-    <!-- Domestic & Inbound -->
-    <section class="tourism-types">
-        <div class="container">
-            <div class="grid-3" style="grid-template-columns: 1fr 1fr;">
-                <div class="feature-box">
-                    <i class="fas fa-map-marked-alt feature-icon"></i>
-                    <h3>Domestic Tourism</h3>
-                    <p>Discover the beauty of your own homeland. We organize trips to Northern Areas, Kashmir, and Gilgit-Baltistan for Pakistani nationals.</p>
-                </div>
-                <div class="feature-box">
-                    <i class="fas fa-globe-asia feature-icon"></i>
-                    <h3>Inbound Tourism</h3>
-                    <p>Welcoming guests from around the world to experience Pakistani hospitality, culture, and unmatched natural beauty.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+            <a href="#" target="_blank" class="social-link">
+              <i class="fab fa-youtube"></i>
+            </a>
 
-    <!-- Activities List -->
-    <section class="activities-list" style="background-color: var(--light-bg);">
-        <div class="container">
-            <div class="section-title">
-                <h2>Our Adventure Activities</h2>
-            </div>
-            <div class="grid-3">
-                <div class="card">
-                    <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Mountaineering" class="card-img">
-                    <div class="card-content">
-                        <h3>Mountaineering</h3>
-                        <p>Summit expeditions to 6000m, 7000m, and 8000m peaks with expert support.</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="https://images.unsplash.com/photo-1474511320723-9a56873867b5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Trekking" class="card-img">
-                    <div class="card-content">
-                        <h3>Trekking</h3>
-                        <p>Guided treks to K2 Base Camp, Fairy Meadows, and other iconic trails.</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="https://images.unsplash.com/photo-1475724017904-b712052c192a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Paragliding" class="card-img">
-                    <div class="card-content">
-                        <h3>Paragliding</h3>
-                        <p>Soar above the valleys and experience the freedom of flight.</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="assets/images/rock climbing.jpg" alt="Rock Climbing" class="card-img">
-                    <div class="card-content">
-                        <h3>Rock & Ice Climbing</h3>
-                        <p>Technical climbing courses and expeditions for all skill levels.</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Camping" class="card-img">
-                    <div class="card-content">
-                        <h3>Camping</h3>
-                        <p>Luxury and survival camping experiences under the starry skies.</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="assets/images/Dessert Safari.jpg" alt="Desert Safari" class="card-img">
-                    <div class="card-content">
-                        <h3>Desert Safari</h3>
-                        <p>Explore the vast deserts of Thar and Cholistan with our expert guides.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+            <a href="#" target="_blank" class="social-link">
+              <i class="fab fa-tiktok"></i>
+            </a>
+          </div>
+</div></div><div class="footer-bottom"><p>© 2024 Zarrar Adventures Travel & Tourism (Pvt.) Ltd. All rights reserved.</p></div></div></footer>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-col">
-                    <h3>Zarrar Adventures</h3>
-                    <p>Your premier partner for adventure tourism, training, and equipment in Pakistan.</p>
-                </div>
-                <div class="footer-col">
-                    <h3>Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="training.html">Training</a></li>
-                        <li><a href="shop.html">Shop</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3>Contact Us</h3>
-                    <ul class="footer-links">
-                        <li><i class="fas fa-map-marker-alt"></i> Pakistan</li>
-                        <li><i class="fas fa-envelope"></i> info@zarraradventures.com</li>
-                        <li><i class="fas fa-phone"></i> +92 300 1234567</li>
-                    </ul>
-                    <div class="social-icons" style="margin-top: 20px;">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2024 Zarrar Adventures Travel & Tourism (Pvt.) Ltd. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- JS -->
-    <script src="assets/js/script.js"></script>
+<script src="/assets/js/script.js"></script>
 </body>
 </html>

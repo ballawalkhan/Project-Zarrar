@@ -1,149 +1,285 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Zarrar Adventures</title>
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
-    <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    
-    <!-- Favicon -->
-    <link rel="icon" href="assets/images/logo.png" type="image/png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | Zarrar Adventures</title>
+  <meta name="description" content="Learn about Zarrar Adventures — our story, mission, vision, and the poly-athlete concept that drives us." />
+  <link rel="icon" href="/public/logo.jpg" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .fade-in.visible { opacity: 1; transform: none; }
+    .about-img-box { border-radius: 16px; overflow: hidden; height: 420px; }
+    .about-img-box img { width: 100%; height: 100%; object-fit: cover; }
+    .poly-card { background: var(--light-gray); border-radius: var(--radius); padding: 32px; border-left: 4px solid var(--burnt-orange); }
+  </style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container navbar">
-            <a href="index.html" class="logo">
-                <img src="assets/images/logo.png" alt="Zarrar Adventures Logo">
+
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <a href="/" class="nav-brand">
+      <img src="/public/logo.jpg" alt="Zarrar Adventures Logo" class="nav-logo" />
+      <span class="nav-title">Zarrar <span class="accent">Adventures</span></span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/" class="nav-link">Home</a></li>
+      <li><a href="/about.html" class="nav-link">About</a></li>
+      <li><a href="/services.html" class="nav-link">Services</a></li>
+      <li><a href="/training.html" class="nav-link">Training</a></li>
+      <li><a href="/shop.html" class="nav-link">Shop</a></li>
+      <li><a href="/blog.html" class="nav-link">Blog</a></li>
+      <li><a href="/opportunities.html" class="nav-link">Opportunities</a></li>
+      <li><a href="/sustainability.html" class="nav-link">Sustainability</a></li>
+      <li><a href="/contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="mode-toggle" id="modeToggle"><span class="mode-dot"></span><span class="mode-text" id="modeText">Domestic</span></div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+  <div class="page-hero">
+    <div class="container">
+      <span class="section-label" style="color:rgba(255,255,255,0.6);">Our Story</span>
+      <h1>About Zarrar Adventures</h1>
+      <p>Forging the next generation of poly-athletes and outdoor explorers since 2017.</p>
+      <div class="breadcrumb" style="justify-content:center;margin-top:16px;">
+        <a href="/">Home</a><span class="sep">›</span><span class="current">About</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHO WE ARE -->
+  <section class="section">
+    <div class="container">
+      <div class="grid-2-1 fade-in">
+        <div>
+          <span class="section-label">Who We Are</span>
+          <h2>More Than a Travel Company</h2>
+          <p style="margin:16px 0;">Zarrar Adventures Travel & Tourism (Pvt.) Ltd. is not just a tour operator — we are an institution dedicated to transforming how people interact with the wilderness. We believe that true adventure is a catalyst for physical and mental evolution.</p>
+          <p>Operating in the heart of the world's most dramatic landscapes, we have been guiding adventurers through Pakistan's majestic mountains, valleys, and rivers since 2017. Our team consists of certified mountaineers, survival experts, and passionate guides who live and breathe the outdoors.</p>
+          <br/>
+          <div style="display:flex;gap:24px;flex-wrap:wrap;margin-top:8px;">
+            <div style="text-align:center;">
+              <div style="font-family:Poppins,sans-serif;font-size:2rem;font-weight:800;color:var(--burnt-orange);">2017</div>
+              <div style="font-size:0.82rem;color:var(--text-muted);">Year Founded</div>
+            </div>
+            <div style="text-align:center;">
+              <div style="font-family:Poppins,sans-serif;font-size:2rem;font-weight:800;color:var(--burnt-orange);">500+</div>
+              <div style="font-size:0.82rem;color:var(--text-muted);">Expeditions</div>
+            </div>
+            <div style="text-align:center;">
+              <div style="font-family:Poppins,sans-serif;font-size:2rem;font-weight:800;color:var(--burnt-orange);">50+</div>
+              <div style="font-size:0.82rem;color:var(--text-muted);">Destinations</div>
+            </div>
+          </div>
+        </div>
+        <div class="about-img-box">
+          <img src="/public/images/k2-base-camp.jpg" alt="Mountains" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSION & VISION -->
+  <section class="section bg-light">
+    <div class="container">
+      <span class="section-label" style="display:block;text-align:center;">Our Purpose</span>
+      <h2 class="section-title">Mission & Vision</h2>
+      <div class="grid-2 fade-in">
+        <div class="mv-card mv-green">
+          <div class="mv-icon">🎯</div>
+          <h3>Our Mission</h3>
+          <p>To provide world-class adventure tourism experiences that are safe, sustainable, and transformative — connecting people with nature while supporting local communities and preserving Pakistan's natural heritage.</p>
+        </div>
+        <div class="mv-card mv-blue">
+          <div class="mv-icon">🔭</div>
+          <h3>Our Vision</h3>
+          <p>To become South Asia's most trusted adventure travel brand, producing a generation of skilled outdoor athletes, environmentally conscious explorers, and empowered wilderness professionals.</p>
+        </div>
+      </div>
+      <div style="margin-top:32px;" class="fade-in">
+        <div style="background:#fff;border-radius:var(--radius);padding:40px;box-shadow:var(--card-shadow);">
+          <h3 style="color:var(--midnight-blue);margin-bottom:16px;">Our Core Values</h3>
+          <div class="grid-4" style="gap:20px;">
+            <div style="text-align:center;padding:20px 10px;">
+              <div style="font-size:2rem;margin-bottom:10px;">🛡️</div>
+              <h4 style="color:var(--midnight-blue);">Safety First</h4>
+              <p style="font-size:0.85rem;">Every adventure is planned with rigorous safety protocols.</p>
+            </div>
+            <div style="text-align:center;padding:20px 10px;">
+              <div style="font-size:2rem;margin-bottom:10px;">🌍</div>
+              <h4 style="color:var(--midnight-blue);">Sustainability</h4>
+              <p style="font-size:0.85rem;">Leave no trace. Protect what we explore.</p>
+            </div>
+            <div style="text-align:center;padding:20px 10px;">
+              <div style="font-size:2rem;margin-bottom:10px;">⭐</div>
+              <h4 style="color:var(--midnight-blue);">Excellence</h4>
+              <p style="font-size:0.85rem;">Premium quality in every service we provide.</p>
+            </div>
+            <div style="text-align:center;padding:20px 10px;">
+              <div style="font-size:2rem;margin-bottom:10px;">🤝</div>
+              <h4 style="color:var(--midnight-blue);">Community</h4>
+              <p style="font-size:0.85rem;">Empowering local guides and communities.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- POLY-ATHLETE CONCEPT -->
+  <section class="section">
+    <div class="container">
+      <div class="grid-2-1 fade-in">
+        <div>
+          <span class="section-label">Our Philosophy</span>
+          <h2>The Poly-Athlete Concept</h2>
+          <p style="margin:16px 0;">At Zarrar Adventures, we believe in developing the complete outdoor athlete — someone who is not limited to a single discipline but masters multiple skills across trekking, climbing, swimming, cycling, wilderness survival, and more.</p>
+          <p>A poly-athlete is versatile, resilient, and adaptive. They are mentally sharp and physically capable of handling any challenge the wild throws at them. Our training programs, expeditions, and community events are all designed to cultivate this multi-dimensional outdoor capability.</p>
+          <br/>
+          <div class="feature-list" style="margin-top:16px;">
+            <div class="feature-item">
+              <div class="feature-icon">🏃</div>
+              <div class="feature-text"><h4>Multi-Discipline Training</h4><p>Trekking, climbing, survival, first aid, and more in one curriculum.</p></div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">🧠</div>
+              <div class="feature-text"><h4>Mental Resilience</h4><p>Challenges designed to build mental strength alongside physical fitness.</p></div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">🌟</div>
+              <div class="feature-text"><h4>Complete Adventurer</h4><p>Graduate from novice to a confident, capable outdoor professional.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="poly-card">
+          <h3 style="color:var(--midnight-blue);margin-bottom:20px;">Poly-Athlete Skills</h3>
+          <div style="display:flex;flex-direction:column;gap:12px;">
+            <div style="display:flex;align-items:center;gap:12px;">
+              <span style="font-size:1.4rem;">🏔️</span>
+              <div><strong style="color:var(--midnight-blue);">High-Altitude Trekking</strong><br/><span style="font-size:0.85rem;color:var(--text-muted);">Karakoram, Himalayas, Hindu Kush</span></div>
+            </div>
+            <div style="display:flex;align-items:center;gap:12px;">
+              <span style="font-size:1.4rem;">🧗</span>
+              <div><strong style="color:var(--midnight-blue);">Rock & Ice Climbing</strong><br/><span style="font-size:0.85rem;color:var(--text-muted);">Technical ascents and bouldering</span></div>
+            </div>
+            <div style="display:flex;align-items:center;gap:12px;">
+              <span style="font-size:1.4rem;">🏕️</span>
+              <div><strong style="color:var(--midnight-blue);">Wilderness Survival</strong><br/><span style="font-size:0.85rem;color:var(--text-muted);">Bushcraft, navigation, shelter</span></div>
+            </div>
+            <div style="display:flex;align-items:center;gap:12px;">
+              <span style="font-size:1.4rem;">🏊</span>
+              <div><strong style="color:var(--midnight-blue);">Swift Water Safety</strong><br/><span style="font-size:0.85rem;color:var(--text-muted);">River crossing and rescue</span></div>
+            </div>
+            <div style="display:flex;align-items:center;gap:12px;">
+              <span style="font-size:1.4rem;">🚵</span>
+              <div><strong style="color:var(--midnight-blue);">Mountain Cycling</strong><br/><span style="font-size:0.85rem;color:var(--text-muted);">Trail riding and endurance</span></div>
+            </div>
+            <div style="display:flex;align-items:center;gap:12px;">
+              <span style="font-size:1.4rem;">🪂</span>
+              <div><strong style="color:var(--midnight-blue);">Paragliding</strong><br/><span style="font-size:0.85rem;color:var(--text-muted);">Tandem and solo flights</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section class="section bg-light">
+    <div class="container">
+      <span class="section-label" style="display:block;text-align:center;">The People Behind the Adventure</span>
+      <h2 class="section-title">Meet Our Team</h2>
+      <p class="section-subtitle">Certified professionals, passionate adventurers, and dedicated guides who make every expedition extraordinary.</p>
+      <div class="grid-4 fade-in">
+        <div class="card team-card">
+          <div class="team-avatar">👨‍🦱</div>
+          <div class="card-body">
+            <div class="team-name">Zarrar Ahmed</div>
+            <div class="team-role">Founder & Lead Guide</div>
+            <p class="team-bio">Certified mountaineer with 15+ years of high-altitude experience. Summit-ed 7000m+ peaks across Pakistan.</p>
+          </div>
+        </div>
+        <div class="card team-card">
+          <div class="team-avatar" style="background:linear-gradient(135deg,var(--burnt-orange),#c95e22);">👩‍🦰</div>
+          <div class="card-body">
+            <div class="team-name">Ayesha Malik</div>
+            <div class="team-role">Wilderness Instructor</div>
+            <p class="team-bio">Expert in bushcraft and survival training. Pakistan's first female certified wilderness instructor.</p>
+          </div>
+        </div>
+        <div class="card team-card">
+          <div class="team-avatar" style="background:linear-gradient(135deg,#1a5c42,var(--forest-green));">👨‍🦲</div>
+          <div class="card-body">
+            <div class="team-name">Bilal Khan</div>
+            <div class="team-role">Lead Trek Guide</div>
+            <p class="team-bio">Born in Gilgit-Baltistan, Bilal has guided 300+ trekking groups through the Karakoram and Himalaya.</p>
+          </div>
+        </div>
+        <div class="card team-card">
+          <div class="team-avatar" style="background:linear-gradient(135deg,#0A2540,#1a3a60);">👨‍💼</div>
+          <div class="card-body">
+            <div class="team-name">Omar Farooq</div>
+            <div class="team-role">Operations Manager</div>
+            <p class="team-bio">Logistics and operations expert ensuring every expedition runs safely and smoothly from start to finish.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<a href="https://wa.me/923219810030" class="whatsapp-float" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="/public/logo.jpg" alt="Zarrar Adventures" class="footer-logo" />
+        <div class="brand-name">Zarrar Adventures</div>
+        <p>Travel & Tourism (Pvt.) Ltd. — Est. 2017</p>
+        <span class="est">EST. 2017</span>
+      </div>
+      <div><h4>Quick Links</h4><ul><li><a href="/">Home</a></li><li><a href="/about.html">About</a></li><li><a href="/services.html">Services</a></li><li><a href="/training.html">Training</a></li><li><a href="/contact.html">Contact</a></li></ul></div>
+      <div><h4>Explore</h4><ul><li><a href="/shop.html">Shop</a></li><li><a href="/blog.html">Blog</a></li><li><a href="/opportunities.html">Opportunities</a></li><li><a href="/sustainability.html">Sustainability</a></li></ul></div>
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p>📍 Pakistan (HQ)</p><p>📞 +92 321 9810030</p><p>✉️ info@zarraradventures.com</p>
+        <a href="https://wa.me/923219810030" class="whatsapp-btn" style="margin-top:16px;font-size:0.85rem;padding:10px 20px;display:inline-flex;">💬 WhatsApp Us</a>
+        
+         <div class="social-links" style="margin-top:15px;">
+            <a href="https://www.facebook.com/zarraradventures/" target="_blank" class="social-link">
+              <i class="fab fa-facebook-f"></i>
             </a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html" class="active">About Us</a></li>
-                <li><a href="services.html">Adventures</a></li>
-                <li><a href="training.html">Training</a></li>
-                <li><a href="shop.html">Equipment</a></li>
-                <li><a href="contact.html" class="btn">Book Now</a></li>
-            </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
-    </header>
 
-    <!-- Page Header -->
-    <section class="page-header" style="background-color: var(--primary-color); color: white; padding: 60px 0; text-align: center;">
-        <div class="container">
-            <h1>About Us</h1>
-            <p>Discover the passion behind Zarrar Adventures.</p>
-        </div>
-    </section>
+            <a href="https://www.instagram.com/zarraradventures" target="_blank" class="social-link">
+              <i class="fab fa-instagram"></i>
+            </a>
 
-    <!-- Company Overview -->
-    <section class="about-overview">
-        <div class="container">
-            <div class="section-title">
-                <h2>Who We Are</h2>
-                <p>Zarrar Adventures Travel & Tourism (Pvt.) Ltd. is a premier adventure tourism company based in Pakistan.</p>
-            </div>
-            <p style="text-align: center; max-width: 800px; margin: 0 auto 40px;">
-                We are dedicated to showcasing the unparalleled beauty of Pakistan's landscapes while providing safe, thrilling, and professionally managed adventure experiences. From the towering peaks of the Himalayas to the vast deserts, we bring you closer to nature.
-            </p>
-            <div class="grid-3">
-                <div class="feature-box">
-                    <i class="fas fa-bullseye feature-icon"></i>
-                    <h3>Mission</h3>
-                    <p>To promote sustainable adventure tourism in Pakistan and provide world-class training and expeditions.</p>
-                </div>
-                <div class="feature-box">
-                    <i class="fas fa-eye feature-icon"></i>
-                    <h3>Vision</h3>
-                    <p>To be the leading adventure tourism company globally recognized for safety, excellence, and eco-tourism.</p>
-                </div>
-                <div class="feature-box">
-                    <i class="fas fa-heart feature-icon"></i>
-                    <h3>Core Values</h3>
-                    <p>Safety, Integrity, Passion, Sustainability, and Excellence in every adventure we undertake.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+            <a href="#" target="_blank" class="social-link">
+              <i class="fab fa-youtube"></i>
+            </a>
 
-    <!-- Team Philosophy -->
-    <section class="team-philosophy" style="background-color: var(--light-bg);">
-        <div class="container">
-            <div class="section-title">
-                <h2>Our Team Philosophy</h2>
-            </div>
-            <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 40px;">
-                <div style="flex: 1; min-width: 300px;">
-                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Team" style="border-radius: 8px; width: 100%;">
-                </div>
-                <div style="flex: 1; min-width: 300px;">
-                    <h3>Poly-Athletes & Certified Guides</h3>
-                    <p>Our team is our greatest asset. We believe in the power of versatility and expertise. Every guide at Zarrar Adventures is not just a skilled mountaineer but a poly-athlete trained in multiple disciplines.</p>
-                    <br>
-                    <ul style="list-style: disc; padding-left: 20px;">
-                        <li>Certified High Altitude Porters & Guides</li>
-                        <li>First Aid & Rescue Trained Professionals</li>
-                        <li>Environmentally Conscious Explorers</li>
-                        <li>Passionate Storytellers of the Mountains</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+            <a href="#" target="_blank" class="social-link">
+              <i class="fab fa-tiktok"></i>
+            </a>
+          </div>
+      </div>
+    </div>
+    <div class="footer-bottom"><p>© 2024 Zarrar Adventures Travel & Tourism (Pvt.) Ltd. All rights reserved.</p></div>
+  </div>
+</footer>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-col">
-                    <h3>Zarrar Adventures</h3>
-                    <p>Your premier partner for adventure tourism, training, and equipment in Pakistan.</p>
-                </div>
-                <div class="footer-col">
-                    <h3>Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="training.html">Training</a></li>
-                        <li><a href="shop.html">Shop</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3>Contact Us</h3>
-                    <ul class="footer-links">
-                        <li><i class="fas fa-map-marker-alt"></i> Pakistan</li>
-                        <li><i class="fas fa-envelope"></i> info@zarraradventures.com</li>
-                        <li><i class="fas fa-phone"></i> +92 300 1234567</li>
-                    </ul>
-                    <div class="social-icons" style="margin-top: 20px;">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2024 Zarrar Adventures Travel & Tourism (Pvt.) Ltd. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- JS -->
-    <script src="assets/js/script.js"></script>
+<script src="/assets/js/script.js"></script>
 </body>
 </html>
